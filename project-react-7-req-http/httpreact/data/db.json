@@ -1,0 +1,39 @@
+{
+  "products": [
+    {
+      "id": "1",
+      "name": "Camisa",
+      "price": 59.9
+    },
+    {
+      "id": "2",
+      "name": "Calça vermelha",
+      "price": 90
+    },
+    {
+      "id": "3",
+      "name": "Boné aba reta",
+      "price": 29.9
+    },
+    {
+      "id": "fe62",
+      "name": "teste",
+      "price": "2"
+    },
+    {
+      "id": "9328",
+      "name": "TESTE2",
+      "price": "22"
+    },
+    {
+      "id": "018a",
+      "name": "teste3",
+      "price": "112"
+    },
+    {
+      "id": "afa7",
+      "name": "teste34",
+      "price": "112"
+    }
+  ]
+}

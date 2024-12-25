@@ -1,0 +1,13 @@
+h1 {
+  background-color: red;
+  margin: auto;
+}
+
+.car-container {
+  display: flex;
+  justify-content: center;
+}
+
+.car-container div {
+  margin-top: 50px;
+}
