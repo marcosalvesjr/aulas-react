@@ -7,7 +7,7 @@ function App() {
   const [products, setProducts] = useState([]);
   const [name, setName] = useState("");
   const [price, setPrice] = useState("");
-  //1-resgatando dados
+  // 1-resgatando dados
   useEffect(() => {
     async function fetchProducts() {
 
