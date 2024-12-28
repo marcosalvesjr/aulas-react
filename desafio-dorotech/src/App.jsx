@@ -10,10 +10,11 @@ function App() {
 
   const [characters, setCharacters] = useState([]);
   const [pageNumber, setPageNumber] = useState(1);
+  const [search, setSearch] = useState("");
 
 
 
-  let url = `https://rickandmortyapi.com/api/character?page=${pageNumber}`
+  let url = `https://rickandmortyapi.com/api/character?page=${pageNumber}&name=${search}`
   useEffect(() => {
     const fetchCharacters = async () => {
       const response = await fetch(url);
@@ -21,12 +22,12 @@ function App() {
       setCharacters(data.results);
     }
     fetchCharacters();
-  }, [pageNumber])
+  }, [pageNumber, search])
   return (
     <>
       <Header />
       <Navbar />
-      <Form />
+      <Form search={search} setSearch={setSearch} />
       <CharacterCard characters={characters} />
       <Pagination prevPage={pageNumber} setPageNumber={setPageNumber} />
 
