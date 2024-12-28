@@ -39,6 +39,26 @@
       "id": "b8e7",
       "name": "teste 4",
       "price": "12"
+    },
+    {
+      "id": "2244",
+      "name": "mouse",
+      "price": "60"
+    },
+    {
+      "id": "0fcc",
+      "name": "KeyBoard",
+      "price": "129"
+    },
+    {
+      "id": "1d87",
+      "name": "Monitor",
+      "price": "650"
+    },
+    {
+      "id": "e877",
+      "name": "Mouse Pad",
+      "price": "79"
     }
   ]
 }
