@@ -16,19 +16,22 @@ const Form = ({ search, setSearch, setPageNumber }) => {
   return (
     <form className="form" onSubmit={handleSubmit}>
       <div className="form-group">
-        <label htmlFor="searchText">Buscar:</label>
-        <input
-          type="text"
-          id="searchText"
-          name="searchText"
-          value={search}
-          onChange={handleInputChange}
-          placeholder="Digite o nome"
-        />
+        <label className='form-group'>
+          <span>Buscar: </span>
+          <input
+            type="text"
+            id="searchText"
+            name="searchText"
+            value={search}
+            onChange={handleInputChange}
+            placeholder="Digite o nome"
+          />
+
+        </label>
 
       </div>
 
-      
+
       <button type="submit">Enviar</button>
     </form>
   );
