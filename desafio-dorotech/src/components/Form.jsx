@@ -1,7 +1,7 @@
 //import React, { useState } from 'react';
 import './Form.css';
 
-const Form = ({search, setSearch }) => {
+const Form = ({ search, setSearch, setPageNumber }) => {
 
   const handleInputChange = (e) => {
     setSearch(e.target.value);
@@ -9,8 +9,9 @@ const Form = ({search, setSearch }) => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-
+    setPageNumber(1)
   };
+
 
   return (
     <form className="form" onSubmit={handleSubmit}>
@@ -24,10 +25,10 @@ const Form = ({search, setSearch }) => {
           onChange={handleInputChange}
           placeholder="Digite o nome"
         />
+
       </div>
 
-
-
+      
       <button type="submit">Enviar</button>
     </form>
   );

@@ -11,6 +11,8 @@ function App() {
   const [characters, setCharacters] = useState([]);
   const [pageNumber, setPageNumber] = useState(1);
   const [search, setSearch] = useState("");
+  const [genders, setGenders] = useState("");
+
 
 
 
@@ -22,12 +24,12 @@ function App() {
       setCharacters(data.results);
     }
     fetchCharacters();
-  }, [pageNumber, search])
+  }, [pageNumber, search, genders])
   return (
     <>
       <Header />
       <Navbar />
-      <Form search={search} setSearch={setSearch} />
+      <Form setPageNumber={setPageNumber} search={search} setSearch={setSearch} />
       <CharacterCard characters={characters} />
       <Pagination prevPage={pageNumber} setPageNumber={setPageNumber} />
 
