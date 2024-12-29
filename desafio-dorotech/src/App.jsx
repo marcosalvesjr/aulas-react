@@ -1,5 +1,4 @@
 import { useEffect, useState } from 'react'
-import Navbar from './components/Navbar'
 import Header from './components/Header'
 import Form from './components/Form'
 import CharacterCard from './components/CharacterCard';
@@ -11,12 +10,12 @@ function App() {
   const [characters, setCharacters] = useState([]);
   const [pageNumber, setPageNumber] = useState(1);
   const [search, setSearch] = useState("");
-  const [genders, setGenders] = useState("");
+  const [genders, setGenders] = useState('');
+  const [status, setStatus] = useState('')
 
 
 
-
-  let url = `https://rickandmortyapi.com/api/character?page=${pageNumber}&name=${search}`
+  let url = `https://rickandmortyapi.com/api/character?page=${pageNumber}&name=${search}&gender=${genders}&status=${status}`
   useEffect(() => {
     const fetchCharacters = async () => {
       const response = await fetch(url);
@@ -24,12 +23,11 @@ function App() {
       setCharacters(data.results);
     }
     fetchCharacters();
-  }, [pageNumber, search, genders])
+  }, [pageNumber, search, genders, status])
   return (
     <>
       <Header />
-      <Navbar />
-      <Form setPageNumber={setPageNumber} search={search} setSearch={setSearch} />
+       <Form setStatus={setStatus} setGenders={setGenders} characters={characters} setPageNumber={setPageNumber} search={search} setSearch={setSearch} />
       <CharacterCard characters={characters} />
       <Pagination prevPage={pageNumber} setPageNumber={setPageNumber} />
 

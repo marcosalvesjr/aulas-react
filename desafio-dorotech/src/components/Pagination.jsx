@@ -2,13 +2,14 @@ import './Pagination.css'
 
 const Pagination = ({ prevPage, setPageNumber }) => {
     const handleNext = () => {
-        setPageNumber(prevPage + 1);
+        if (prevPage <= 41)
+            setPageNumber(prevPage + 1);
         //console.log(prevPage)
     }
     const handlePrev = () => {
-        if (prevPage > 1){
+        if (prevPage > 1) {
             return setPageNumber(prevPage - 1)
-            
+
         };
         //console.log(prevPage);
     }
