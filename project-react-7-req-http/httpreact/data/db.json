@@ -1,29 +1,9 @@
 {
   "products": [
     {
-      "id": "1",
-      "name": "Camisa",
-      "price": 59.9
-    },
-    {
-      "id": "2",
-      "name": "Calça vermelha",
-      "price": 90
-    },
-    {
-      "id": "3",
-      "name": "Boné aba reta",
-      "price": 29.9
-    },
-    {
       "id": "fe62",
       "name": "teste",
       "price": "2"
-    },
-    {
-      "id": "9328",
-      "name": "TESTE2",
-      "price": "22"
     },
     {
       "id": "018a",
@@ -41,24 +21,14 @@
       "price": "12"
     },
     {
-      "id": "2244",
-      "name": "mouse",
-      "price": "60"
-    },
-    {
       "id": "0fcc",
       "name": "KeyBoard",
       "price": "129"
     },
     {
-      "id": "1d87",
-      "name": "Monitor",
-      "price": "650"
-    },
-    {
-      "id": "e877",
-      "name": "Mouse Pad",
-      "price": "79"
+      "id": "c831",
+      "name": "Joystick",
+      "price": "122"
     }
   ]
 }
