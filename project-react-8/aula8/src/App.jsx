@@ -5,6 +5,7 @@ import Home from './pages/Home/Home'
 import About from './pages/About/About'
 import Navbar from './components/Navbar/Navbar'
 import Product from './pages/Product/Product'
+import Info from './pages/Info/Info'
 
 function App() {
 
@@ -17,8 +18,11 @@ function App() {
         <Routes>
           <Route path='/' element={<Home />} />
           <Route path='/about' element={<About />} />
+          {/*6-nested route */}
+          <Route path='/products/:id/info' element={<Info />} />
           {/*4-rota dinamica */}
           <Route path='/products/:id' element={<Product />} />
+
         </Routes>
       </BrowserRouter>
     </div>
