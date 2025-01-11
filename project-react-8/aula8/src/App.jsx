@@ -6,6 +6,7 @@ import About from './pages/About/About'
 import Navbar from './components/Navbar/Navbar'
 import Product from './pages/Product/Product'
 import Info from './pages/Info/Info'
+import NotFound from './pages/NotFound/NotFound'
 
 function App() {
 
@@ -22,6 +23,8 @@ function App() {
           <Route path='/products/:id/info' element={<Info />} />
           {/*4-rota dinamica */}
           <Route path='/products/:id' element={<Product />} />
+          {/*7-no match route */}
+          <Route path='*' element={<NotFound />} />
 
         </Routes>
       </BrowserRouter>
