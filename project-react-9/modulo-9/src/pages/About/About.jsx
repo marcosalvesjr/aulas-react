@@ -2,14 +2,16 @@
 //import { CounterContext } from "../../context/CounterContext"
 import ChangeCounter from "../../components/ChangeCounter/ChangeCounter"
 import { useCounterContext } from "../../hooks/useCounterContext"
+import { useTitleColorContext } from "../../hooks/useTitleColorContext";
 
 const About = () => {
   //const { counter } = useContext(CounterContext);
   const { counter } = useCounterContext();
+  const { color, dispatch } = useTitleColorContext();
 
   return (
     <div>
-      <h1>Sobre</h1>
+      <h1 style={{ color: color }}>Sobre</h1>
       <p>Valor do contador: {counter}</p>
       {/* 3 - alterar valor context */}
       <ChangeCounter />
