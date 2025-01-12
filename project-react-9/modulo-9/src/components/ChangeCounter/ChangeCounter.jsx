@@ -13,6 +13,7 @@ const ChangeCounter = () => {
             <button onClick={() => { setCounter(counter + 1) }}>
                 Adicionar valor ao counter
             </button>
+            <button onClick={() => { setCounter(0) }}>Zerar contagem</button>
         </div>
     )
 }
