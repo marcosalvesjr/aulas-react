@@ -21,7 +21,7 @@ const insertReducer = (state, action) => {
     }
 }
 
-export const useInsertDocumento = (docCollection) => {
+export const useInsertDocument = (docCollection) => {
 
     const [response, dispatch] = useReducer(insertReducer, initialState)
 
@@ -44,7 +44,8 @@ export const useInsertDocumento = (docCollection) => {
             const newDocument = { ...document, createdAt: Timestamp.now() }
 
             const insertDocument = await addDoc(
-                collection(db, docCollection), newDocument
+                collection(db, docCollection), 
+                newDocument
             )
             checkCancelBeforeDispatch({
                 type: "INSERTED_DOC",
